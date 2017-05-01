@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预约提交</title>
+    <link rel="icon" href="img/icon/title-icon.png"/>
+    <link rel="stylesheet" href="css/submit.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/form-window.css" media="all">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<header class="header cls">
+    <div class="nav">
+        <div class="logo">
+            <img src="img/icon/logo.png">
+        </div>
+        <ul class="nav-list cls">
+            <a href="index.html">
+                <li class="nav-item">首页</li>
+            </a>
+            <a href="Housekeeping.html">
+                <li class="nav-item">家政</li>
+            </a>
+            <a href="#">
+                <li class="nav-item">月嫂</li>
+            </a>
+            <a href="#">
+                <li class="nav-item">育儿嫂</li>
+
+            </a>
+            <a href="#">
+                <li class="nav-item">保姆</li>
+            </a>
+            <a href="#">
+                <li class="nav-item">企业服务</li>
+            </a>
+            <a href="#">
+                <li class="nav-item">
+                    <div class="theme-buy">
+                        <a class="btn btn-primary btn-large theme-login" href="javascript:;">加入我们</a>
+                    </div>
+                    <div class="theme-popover">
+                        <div class="theme-poptit">
+                            <a href="javascript:;" title="关闭" class="close">×</a>
+                            <h3>加入我们 获得更多精彩</h3>
+                        </div>
+                        <div class="theme-popbod dform">
+                            <form class="theme-signin" name="loginform" action="/Account/OrderPerson" method="post"
+                                  id="frmExpress">
+                                <div class="field0">
+                                    <input name="Type" type="radio" value="0" id="radType0" checked="checked"/><label
+                                        for="radType0">我要找阿姨</label>
+                                    <input name="Type" type="radio" value="0" id="radType1"/><label
+                                        for="radType1">我要找工作</label>
+                                </div>
+                                <div class="field">
+                                    <input type="text" name="Name" id="exName" class="text" data-val="true"
+                                           placeholder="请输入您的姓名"/>
+                                </div>
+                                <div class="field">
+                                    <input type="text" name="Mobile" id="exMobile" class="text" data-val="true"
+                                           placeholder="请输入手机号码" data-val-regex="请输入正确的手机号码"
+                                           data-val-regex-pattern="^\+?(86)?[1][3458]\d{9}$"/>
+                                </div>
+                                <div class="field">
+                                    <select name="Addr1" id="addr1" style="width:104px">
+                                        <option value="110000" selected="selected">北京市</option>
+                                        <option value="120000">天津市</option>
+                                        <option value="130000">河北省</option>
+                                        <option value="140000">山西省</option>
+                                        <option value="150000">内蒙古</option>
+                                        <option value="210000">辽宁省</option>
+                                        <option value="220000">吉林省</option>
+                                        <option value="230000">黑龙江省</option>
+                                        <option value="310000">上海市</option>
+                                        <option value="320000">江苏省</option>
+                                        <option value="330000">浙江省</option>
+                                        <option value="340000">安徽省</option>
+                                        <option value="350000">福建省</option>
+                                        <option value="360000">江西省</option>
+                                        <option value="370000">山东省</option>
+                                        <option value="410000">河南省</option>
+                                        <option value="420000">湖北省</option>
+                                        <option value="430000">湖南省</option>
+                                        <option value="440000">广东省</option>
+                                        <option value="450000">广西</option>
+                                        <option value="460000">海南省</option>
+                                        <option value="500000">重庆市</option>
+                                        <option value="510000">四川省</option>
+                                        <option value="520000">贵州省</option>
+                                        <option value="530000">云南省</option>
+                                        <option value="540000">西藏</option>
+                                        <option value="610000">陕西省</option>
+                                        <option value="620000">甘肃省</option>
+                                        <option value="630000">青海省</option>
+                                        <option value="640000">宁夏</option>
+                                        <option value="650000">新疆</option>
+                                        <option value="710000">台湾</option>
+                                        <option value="810000">香港</option>
+                                        <option value="820000">澳门</option>
+                                        <option value="foreign">其他国家</option>
+                                    </select>
+                                    <select name="Addr2" id="addr2" style="width:104px;margin:0;">
+                                        <option value="110000" selected="selected">请选择</option>
+                                        <option value="110001">东城区</option>
+                                        <option value="110002">西城区</option>
+                                        <option value="110003">宣武区</option>
+                                        <option value="110004">朝阳区</option>
+                                        <option value="110005">丰台区</option>
+                                        <option value="110005">海淀区</option>
+                                        <option value="110006">石景山区</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <input type="text" name="AddressMord" id="addrMore" class="text"
+                                           placeholder="详细地址"/>
+                                    <input type="hidden" name="Address" id="addrFull" value=""/>
+                                </div>
+                                <div class="field">
+                                    <select id="exCraft" name="Craft" data-val="true" data-val-required="请选择工种">
+                                        <option value="请选择">请选择</option>
+                                        <option value="月嫂" data-servicetypeid="7de4c552-70ec-47b0-bebf-aa7ec0236a4d">
+                                            月嫂
+                                        </option>
+                                        <option value="育儿嫂" data-servicetypeid="43bc8456-76db-4229-9241-d257ff0d04bb">
+                                            育儿嫂
+                                        </option>
+                                        <option value="育儿兼家务" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            育儿兼家务
+                                        </option>
+                                        <option value="早教师" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            早教师
+                                        </option>
+                                        <option value="自理老人" data-servicetypeid="a93b31af-b471-4372-b1d6-7398f2ad27a5">
+                                            自理老人
+                                        </option>
+                                        <option value="半自理老人" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            半自理老人
+                                        </option>
+                                        <option value="不自理老人" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            不自理老人
+                                        </option>
+                                        <option value="病患陪护" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            病患陪护
+                                        </option>
+                                        <option value="一般家务" data-servicetypeid="6cfcd891-d483-4754-aa56-3276ac3aa21f">
+                                            一般家务
+                                        </option>
+                                        <option value="家务兼育儿" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            家务兼育儿
+                                        </option>
+                                        <option value="涉外家务" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            涉外家务
+                                        </option>
+                                        <option value="高端家务" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            高端家务
+                                        </option>
+                                        <option value="别墅家务" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            别墅家务
+                                        </option>
+                                        <option value="家庭教师" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            家庭教师
+                                        </option>
+                                        <option value="私人助理" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            私人助理
+                                        </option>
+                                        <option value="管家" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            管家
+                                        </option>
+                                        <option value="厨师" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            厨师
+                                        </option>
+                                        <option value="司机" data-servicetypeid="00000000-0000-0000-0000-000000000000">
+                                            司机
+                                        </option>
+                                        <option value="日常保洁" data-servicetypeid="9aa84d03-4f74-4d20-a034-a2fb134c4841">
+                                            日常保洁
+                                        </option>
+                                        <option value="包月小时工" data-servicetypeid="1a054b30-f8b4-45e0-945a-d7d19e9a3afe">
+                                            包月小时工
+                                        </option>
+                                    </select>
+                                    <input type="hidden" name="ServiceTypeID" id="ServiceTypeID"/>
+                                </div>
+                                <input id="btnExpress" type="submit" class="button" value="快速预定"
+                                />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="theme-popover-mask"></div>
+                </li>
+            </a>
+            <input type="text" class="nav-input">
+        </ul>
+    </div>
+</header>
+<div id="page">
+    <h1>提交预约</h1>
+    <div class="textbox" >
+        <form method="post">
+            <div class="form_field">
+                <label for="Name"><span id="labName">真实姓名</span><span class="required">*</span>：</label>
+                <div class="input">
+                    <input class="text"  data-val-length-max="15"
+                           data-val-length-min="2" data-val-required="请输入姓名/名称" id="Name" maxlength="15" name="Name"
+                           type="text" value=""/>
+                    <span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            <div class="form_field" id="fldMobileVerfiyCode">
+                <label for="Mobile">手机号码<span class="required">*</span>：</label>
+                <div class="input">
+                    <input type="text" id="Mobile" name="Mobile" value="" maxlength="20" class="text" data-val="true"
+                           data-val-required="请输入手机号码" data-val-regex="请输入正确的手机号码"
+                           data-val-regex-pattern="^\+?(86)?[1][3458]\d{9}$"/>
+                    <span class="field-validation-valid" data-valmsg-for="Mobile" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            <div class="form_field">
+                <label for="VerifyCode">验证码<span class="required">*</span>：</label>
+                <div class="input" style="height:38px;">
+                    <div style="float:left;display:inline;width:105px;overflow:hidden;">
+                        <input type="text" id="VerifyCode" name="VerifyCode" maxlength="10" class="text"
+                               style="width:80px;" data-val="true" data-val-remote="验证码错误"
+                               data-val-remote-additionalfields="*.VerifyCode,*.ActionName"
+                               data-val-remote-url="/Json/CheckVerifyCode" data-val-required="请输入验证码"/>
+                    </div>
+                    <div style="float:left;display:inline;height:38px;">
+                        <img id="vcImg" src="img/icon/VerifyCode.gif" alt=""
+                             style="vertical-align:middle;"/>
+                        &nbsp;<a href="javascript:void(1)" id="vcBtn">换一张</a></div>
+                    <input id="ActionName" type="hidden" name="ActionName" value="OrderPerson"/>
+                    <span class="field-validation-valid" data-valmsg-for="VerifyCode" data-valmsg-replace="true"
+                          style="margin-left:30px;"></span>
+                </div>
+                <div class="under_helper">请输入图片中的字符，不区分大小写。</div>
+            </div>
+            <script language="javascript" type="text/javascript">
+                var $vcBtn = $('#vcBtn');
+                var $vcImg = $('#vcImg');
+
+                $vcBtn.click(function () {
+                    ReLoadVerifyCodeImage();
+                });
+
+                $vcImg.click(function () {
+                    ReLoadVerifyCodeImage();
+                });
+
+                function ReLoadVerifyCodeImage() {
+                    $vcImg.attr("src", "/File/VerifyCode?a=" + $('#ActionName').val() + "&s=" + new Date().getTime());
+                    $('#VerifyCode').focus();
+                }
+            </script>
+            <div class="form_field">
+                <label for="VerifyCode">短信验证码<span class="required">*</span>：</label>
+                <div class="input" style="height:38px;">
+                    <div style="float:left;width:122px;overflow:hidden;">
+                        <input type="text" id="codeVerifyCode" name="codeVerifyCode" maxlength="8"
+                               style="width:100px;margin-right:0;" class="text" data-val="true"
+                               data-val-required="请输入验证码"/>
+                    </div>
+                    <input id="SendVerifyCode" type="button" class="input_button"
+                           style="float:left;width:172px;margin-right:25px;margin-left:0px;" value="获取验证码(免费短信)"/>
+                    <span class="field-validation-valid" data-valmsg-for="codeVerifyCode"
+                          data-valmsg-replace="true"></span>
+                </div>
+                <div class="under_helper">
+                    如果您在2分钟内没有收到短信，可重新获取。多次获取验证码，以最后一次短信为准。
+                </div>
+            </div>
+            <script language="javascript" type="text/javascript">
+
+                var now = '';
+                var nowMd5 = '';
+                $('#SendVerifyCode').click(function () {
+                    //debugger;
+                    var nowVerifyCode = $("#VerifyCode").val();
+
+                    GetSafeTime();
+                    SendVerifyCode(this, $("#fldMobileVerfiyCode input[name='Mobile']"), "OrderPerson", now, nowMd5, nowVerifyCode);
+
+                });
+                function GetSafeTime() {
+                    $.ajax({
+                        type: "GET",
+                        url: "/Json/GetSafeTime",
+                        cache: false,
+                        async: false,
+                        success: function (result) {
+                            now = result.NowTime;
+                            nowMd5 = result.NowTimeMd5;
+                            //debugger;
+                            //SendVerifyCodeCallback(src, result.Status, result.Message);
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            //debugger;
+                            //SendVerifyCodeCallback(src, 1, "验证码短信发送失败，请稍后重试。");
+                        }
+                    });
+                }
+                function SendVerifyCode(src, $mobile, action, now, nowMd5, nowVerifyCode) {
+                    if ($mobile.valid()) {
+                        src.disabled = true;
+                        $.ajax({
+                            type: "GET",
+                            url: "/Json/SendMobileVerifyCode/?m=" + $mobile.val() + "&a=" + action + "&now=" + now + "&nowMd5=" + nowMd5 + "&nowVerifyCode=" + nowVerifyCode,
+                            cache: false,
+                            async: false,
+                            success: function (result) {
+                                SendVerifyCodeCallback(src, result.Status, result.Message);
+                            },
+                            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                SendVerifyCodeCallback(src, 1, "验证码短信发送失败，请稍后重试。");
+                            }
+                        });
+                    }
+                    else if (!$mobile.is(":focus")) {
+                        src.disabled = true;
+                        setTimeout(function () {
+                            SendVerifyCode(src, $mobile, action, now, nowMd5);
+                        }, 1000);
+                    }
+                    else {
+                        src.disabled = false;
+                    }
+                }
+
+                function SendVerifyCodeCallback(src, status, message) {
+                    var seconds = 120;
+                    if (status == 0) {
+                        setTimeout(function () {
+                            SendVerifyCodeTimer(src, seconds);
+                        }, 1000);
+                        SuccessBox("验证码短信已发出，请注意查收。");
+                    }
+                    else {
+                        src.disabled = false;
+                        ErrorBox(message);
+                    }
+                }
+
+                function SendVerifyCodeTimer(src, seconds) {
+                    if (seconds <= 0) {
+                        src.disabled = false;
+                        src.value = "获取验证码(免费短信)";
+                    }
+                    else {
+                        var subSeconds = String(seconds % 60);
+                        if (subSeconds.length == 1)
+                            subSeconds = "0" + subSeconds;
+
+                        src.value = "短信已发送，请等待 " + parseInt(seconds / 60) + ":" + subSeconds;
+                        seconds--;
+                        setTimeout(function () {
+                            SendVerifyCodeTimer(src, seconds);
+                        }, 1000);
+                    }
+                }
+            </script>
+            <div class="form_field">
+                <label >服务地址<span class="required">*</span>：</label>
+                <div class="input">
+                    <div style="padding-bottom:5px;">
+                        <select name="WorkAddrAddr1" id="WorkAddr_addr1">
+                            <option value="110000"
+                            >北京市
+                            </option>
+                            <option value="120000"
+                            >天津市
+                            </option>
+                            <option value="130000"
+                            >河北省
+                            </option>
+                            <option value="140000"
+                            >山西省
+                            </option>
+                            <option value="150000"
+                            >内蒙古
+                            </option>
+                            <option value="210000"
+                            >辽宁省
+                            </option>
+                            <option value="220000"
+                            >吉林省
+                            </option>
+                            <option value="230000"
+                            >黑龙江省
+                            </option>
+                            <option value="310000"
+                            >上海市
+                            </option>
+                            <option value="320000"
+                            >江苏省
+                            </option>
+                            <option value="330000"
+                            >浙江省
+                            </option>
+                            <option value="340000"
+                            >安徽省
+                            </option>
+                            <option value="350000"
+                            >福建省
+                            </option>
+                            <option value="360000"
+                            >江西省
+                            </option>
+                            <option value="370000"
+                            >山东省
+                            </option>
+                            <option value="410000"
+                            >河南省
+                            </option>
+                            <option value="420000"
+                            >湖北省
+                            </option>
+                            <option value="430000"
+                            >湖南省
+                            </option>
+                            <option value="440000"
+                            >广东省
+                            </option>
+                            <option value="450000"
+                            >广西
+                            </option>
+                            <option value="460000"
+                            >海南省
+                            </option>
+                            <option value="500000"
+                            >重庆市
+                            </option>
+                            <option value="510000"
+                            >四川省
+                            </option>
+                            <option value="520000"
+                            >贵州省
+                            </option>
+                            <option value="530000"
+                            >云南省
+                            </option>
+                            <option value="540000"
+                            >西藏
+                            </option>
+                            <option value="610000"
+                            >陕西省
+                            </option>
+                            <option value="620000"
+                            >甘肃省
+                            </option>
+                            <option value="630000"
+                            >青海省
+                            </option>
+                            <option value="640000"
+                            >宁夏
+                            </option>
+                            <option value="650000"
+                            >新疆
+                            </option>
+                            <option value="710000"
+                            >台湾
+                            </option>
+                            <option value="810000"
+                            >香港
+                            </option>
+                            <option value="820000"
+                            >澳门
+                            </option>
+                            <option value="foreign"
+                            >其他国家
+                            </option>
+                        </select>
+                        <select name="WorkAddrAddr2" id="WorkAddr_addr2">
+                            <option value="110000">东城区</option>
+                            <option value="120000">西城区</option>
+                            <option value="130000">海淀区</option>
+                            <option value="140000">朝阳区</option>
+                            <option value="150000">丰台区</option>
+                            <option value="210000">石景山区</option>
+                            <option value="220000">门头沟区</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <script language="javascript" type="text/javascript">
+                $('#WorkAddr_addr1, #WorkAddr_addr2').change(function () {
+                    SetAddr($(this).next(), $(this).val(), $('#WorkAddr_addrori').val());
+                });
+
+                $('#WorkAddr_addr3').change(function () {
+                    var addr1 = "";
+                    var addr2 = "";
+                    var addr3 = "";
+                    var $addr1 = $('#WorkAddr_addr1');
+                    var $addr2 = $('#WorkAddr_addr2');
+                    var $addrMore = $('#WorkAddr_addrmore');
+                    var $addrFull = $('#WorkAddr');
+                    var $addrOri = $('#WorkAddr_addrori');
+
+                    if ($addr1.is(":visible")) {
+                        addr1 = new RegExp($addr1[0].options[$addr1[0].selectedIndex].text, "g");
+                    }
+                    if ($addr2.is(":visible")) {
+                        addr2 = new RegExp($addr2[0].options[$addr2[0].selectedIndex].text, "g");
+                    }
+                    if ($(this).is(":visible")) {
+                        addr3 = new RegExp($(this)[0].options[$(this)[0].selectedIndex].text, "g");
+                    }
+                    $addrMore.val($addrOri.val().replace(addr1, "").replace(addr2, "").replace(addr3, ""));
+
+                    SetFullAddr($addr1, $addr2, $(this), $addrMore, $addrFull);
+                });
+
+                $('#WorkAddr_addrmore').bind("change blur", function () {
+                    SetFullAddr($('#WorkAddr_addr1'), $('#WorkAddr_addr2'), $('#WorkAddr_addr3'), $(this), $('#WorkAddr'));
+                });
+
+                $('#WorkAddr_addr1').change();
+            </script>
+            <div class="form_field">
+                <label for="ServiceTypeID"><span id="">雇佣工种</span><span class="required">*</span>：</label>
+                <div class="input">
+                    <select name="employment-Type" id="employment-Type">
+                        <option value="110000"
+                        >月嫂</option>
+                        <option value="120000"
+                        >育儿嫂</option>
+                        <option value="130000"
+                        >早教师</option>
+                        <option value="140000"
+                        >临时家务员</option>
+                        <option value="150000"
+                        >别墅家务员</option>
+                        <option value="210000"
+                        >包月小时工</option>
+                        <option value="220000"
+                        >企业保洁工</option>
+                    </select>
+
+                    <span class="field-validation-valid" data-valmsg-for="Type" data-valmsg-replace="true"></span>
+                </div>
+                <div class="under_helper">请选择您需要雇佣的工种。</div>
+            </div>
+            <div class="form_field">
+                <label >详细信息：</label>
+                <div class="input">
+                    <input class="text"  data-val-length-max="10" width="20px"
+                           data-val-length-min="2" data-val-required="请输入详细情况和具体需求"  maxlength="15" name="Type"
+                           id="LeaveWords"   type="text" value=""/>
+                    <span class="field-validation-valid" data-valmsg-for="Type" data-valmsg-replace="true"></span>
+
+                </div>
+                <div class="under_helper">请填写您的详细情况和具体需求。还可输入 <strong id="remaincount">200</strong> 个字。</div>
+            </div>
+            <div class="form_field">
+                <label >可接受工资：</label>
+                <div class="input">
+                    <span>￥</span>
+                    <input class="text" data-val="true" data-val-number="工资必须是数字。" data-val-required="请输入工资数额，如不确定请填0"
+                           id="Salary" maxlength="10" name="Salary" style="width:80px;" type="text" value="0"/>
+                    <span>元&nbsp;/</span>
+                    <select name="SalaryType" id="SalaryType">
+                        <option value="0" selected="selected">月</option>
+                        <option value="1">周</option>
+                        <option value="2">天</option>
+                        <option value="3">小时</option>
+                        <option value="4">次</option>
+                        <option value="5">面议</option>
+                    </select>
+                    <span class="field-validation-valid" data-valmsg-for="Salary" data-valmsg-replace="true"></span>
+                </div>
+                <div class="under_helper">请填写您能够接受的工资水平。</div>
+            </div>
+            <div class="form_field">
+                <div class="input">
+                    <input type="submit" class="button" value="同意用户协议并提交"/>
+                    &nbsp; &nbsp; <a href="/About/Law" target="_blank">点击查看《阿姨来了用户协议》</a></div>
+            </div>
+        </form>
+    </div>
+  <!--  <div class="link">
+        <ul>
+            <li class="title">筛选工种</li>
+            <li><a href="/Home/Month">月嫂</a></li>
+            <li><a href="/Home/Baby">育儿嫂</a></li>
+            <li><a href="/Home/House">家务员</a></li>
+            <li><a href="/Home/Hour">小时工</a></li>
+            <li><a href="/Home/Senior">养老</a></li>
+        </ul>
+        <ul>
+            <li class="title">服务须知</li>
+            <li><a href="/About/Service/572">雇主问答</a></li>
+            <li><a href="/About/Service/573">求职问答</a></li>
+            <li><a href="/About/Service/574">工资参考</a></li>
+            <li><a href="/About/Service/933">母婴护理师等级划分</a></li>
+        </ul>
+        <ul>
+            <li class="title">阿姨大学</li>
+            <li><a href="/About/Teach/0?type=MTeach">管理课程</a></li>
+            <li><a href="/About/Teach/0?type=PTeach">家政员课程</a></li>
+            <li><a href="/About/Teach/0?type=JTeach">雇主课程</a></li>
+            <li><a href="/About/Teach/0?type=AYCertificate">证书查询</a></li>
+        </ul>
+        <ul>
+            <li class="title">优惠信息</li>
+            <li><a href="/About/Activity/929">10周年优惠</a></li>
+        </ul>
+        <ul>
+            <li class="title">家政社区</li>
+            <li><a href="http://weibo.com/u/2751696863" target="_blank">雇主吐槽</a></li>
+            <li><a href="/Club/Tavern">女子客栈</a></li>
+            <li><a href="/Club/Writing">原生态写作</a></li>
+            <li><a href="/Club/Good">中国好阿姨</a></li>
+            <li><a href="/Club/Photo">大家拍</a></li>
+        </ul>
+
+    </div>-->
+</div>
+<footer class="footer">
+    <ul class="about-list">
+        <li class="about-item"><a href="">网站地图</a></li>
+        <li class="about-item">|</li>
+        <li class="about-item"><a href="">关于我们</a></li>
+        <li class="about-item">|</li>
+        <li class="about-item"><a href="">加入我们</a></li>
+        <li class="about-item">|</li>
+        <li class="about-item"><a href="">媒体报道</a></li>
+    </ul>
+    <div class="msg">
+        <p class="about-botton">@2017 zhoubao.com 阿姨来了版权所有</p>
+        <p class="about-botton">周宝家政有限公司</p>
+    </div>
+</footer>
+</div>
+
+<div id="ActionResult" style="display: none"></div>
+
+<script language="javascript" type="text/javascript">
+    $(function () {
+        $("#menu ul .m_orderperson a").addClass("current");
+
+        $(document).click(function (e) {
+            var src = e.srcElement || e.target;
+            $("form .item_list, form .box").each(function (i) {
+                if (!this.contains(src) && $(this).prev().attr("id") != src.id)
+                    $(this).hide();
+            });
+
+            if ($(".manager_list").length) {
+                if (!$(".manager_list")[0].contains(src)) {
+                    $(".manager_list ul li").removeClass("show").not(".selected").hide();
+                    $("#selManager").show();
+                }
+            }
+        });
+
+        $("#selManager").click(function () {
+            $(".manager_list ul li").addClass("show").show();
+            $(this).hide();
+        });
+
+        $(".manager_list ul li").click(function () {
+            $("#ManagerID").val($(this).attr("data-val"));
+            $(".manager_list ul li").removeClass("show").not(this).removeClass("selected").hide();
+            $(this).addClass("selected");
+            $("#selManager").show();
+        });
+
+
+        $("#Craft").focus(function () {
+            $("#listCraft .title").text("选择工种");
+            ShowMultiList($("#Craft"), "#listCraft", "bottom");
+        });
+
+        $("#listCraft li span").click(function () {
+
+            $("#listCraft li span").not($(this)).removeClass("selected");
+            SetSinglValue($(this), $("form #Craft"));
+            SetServiceTypeID($(this).attr('data-servicetypeid'));
+            if ($("form #Craft").val().length > 0) {
+                $("#listCraft").hide();
+            }
+        });
+
+        $("form .item_list .close").click(function () {
+            $(this).parents(".item_list").hide();
+        });
+
+        $("#persons li").delegate("img", "click", function () {
+            RemovePerson($(this).attr("data-value"));
+            $(this).parent().remove();
+        });
+
+        //SetType();
+        initQRCode('3145d966-5d0f-4646-b407-bdeb1b2ea56a', 100);
+
+
+        //注释首页弹出的对话框
+
+    });
+
+    function OpenChat() {
+        $("#ActionResult").load('/Home/Chat');
+    }
+
+
+    function RemovePerson(id) {
+        var $persons = $("input[name='OrderID']");
+        var persons = $persons.val();
+        $persons.val(persons.replace(new RegExp(id, "g"), "").replace(new RegExp(",,", "g"), ",").trim(","));
+    }
+
+
+    function SetServiceTypeID(serviceTypeID) {
+        $('#ServiceTypeID').val(serviceTypeID);
+    }
+
+</script>
+<script type='text/javascript'>
+    (function (m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function () {
+                    (m[i].a = m[i].a || []).push(arguments)
+                };
+        j = ei.createElement(q),
+                s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = '//static.meiqia.com/dist/meiqia.js';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', 35831);
+</script>
+</body>
+</html>
