@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>月嫂</title>
+    <link rel="icon" href="img/icon/logo.png"/>
+    <link rel="stylesheet" href="node_modules/reset.css/reset.css">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="css/month.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<header class="header cls">
+    <div class="nav">
+        <div class="logo">
+            <img class="nav-img" src="img/icon/logo.png"/>
+        </div>
+        <ul class="nav-list cls">
+            <a href="index.html">
+                <li class="nav-item">首页</li>
+            </a>
+            <a href="Housekeeping.html">
+                <li class="nav-item">家政</li>
+            </a>
+            <a href="Month.html">
+                <li class="nav-item">月嫂</li>
+            </a>
+            <a href="#">
+                <li class="nav-item">育儿嫂</li>
+
+            </a>
+            <a href="#">
+                <li class="nav-item">保姆</li>
+            </a>
+            <a href="#">
+                <li class="nav-item">企业服务</li>
+            </a>
+        </ul>
+    </div>
+</header>
+<div class="large-container">
+    <div class="large-content">
+        <div class="content">
+            <div class="banner">
+                <a href="#"><img src="./img/fuyubiaoyu.png" alt="标题1"/></a>
+            </div>
+        </div>
+        <div class="step">
+            <h2>简单三步完成雇佣</h2>
+            <ul>
+                <li class="step_li"><img src="img/icon/step1.png"  alt=""><span class="number">1</span><span class="text">在线 <a href="/Account/OrderPerson">提交需求</a> ，或拨打服务热线：400-060-1560。</span></li>
+                <li class="step_li"><img src="img/icon/step2.png"  alt=""><span class="number">2</span><span class="text">家政经纪人会及时与您接洽，提供一对一服务。</span></li>
+                <li class="step_li"><img src="img/icon/step3.png"  alt=""><span class="number">3</span><span class="text last">根据需求制定雇佣方案，委派阿姨入户，全程跟踪指导。</span></li>
+            </ul>
+        </div>
+        <form action="/Home/personSearch" data-ajax="true" data-ajax-loading="#searching" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#personList" id="searchForm" method="post" novalidate="novalidate">    <input name="pcb" type="hidden" value="SetPage">
+            <input id="Craft" name="Craft" type="hidden" value="月嫂">
+            <input id="Keyword" name="Keyword" type="hidden" value="">
+            <input id="PageIndex" name="PageIndex" type="hidden" value="">
+            <div class="area">
+                <div class="item">
+                    籍贯：
+                </div>
+                <input type="hidden" name="Native" value="">
+                <ul class="check">
+                    <li class="default" data-value=""><span class="selected">不限</span></li>
+                    <li title="黑龙江,吉林,辽宁" data-value="黑龙江,吉林,辽宁"><span>东北</span></li>
+                    <li title="北京,天津,河北,山东,河南,山西,内蒙古" data-value="北京,天津,河北,山东,河南,山西,内蒙古"><span>华北</span></li>
+                    <li title="上海,安徽,江苏,浙江" data-value="上海,安徽,江苏,浙江"><span>华东</span></li>
+                    <li title="四川,重庆,云南,贵州" data-value="四川,重庆,云南,贵州"><span>西南</span></li>
+                    <li title="陕西,宁夏,甘肃,青海" data-value="陕西,宁夏,甘肃,青海"><span>西北</span></li>
+                    <li title="湖北,湖南,江西,广东,广西,福建,海南" data-value="湖北,湖南,江西,广东,广西,福建,海南"><span>南方</span></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="split"></div>
+            <div class="area">
+                <div class="item">
+                    年龄：
+                </div>
+                <input type="hidden" name="Age" value="a0">
+                <ul class="check">
+                    <li class="default" data-value="a0"><span class="selected">不限</span></li>
+                    <li data-value="a1"><span>35岁以下</span></li>
+                    <li data-value="a2"><span>36-48岁</span></li>
+                    <li data-value="a3"><span>49岁以上</span></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="split"></div>
+            <div class="area">
+                <div class="item">
+                    经验：
+                </div>
+                <input type="hidden" name="Experience" value="0">
+                <ul class="check">
+                    <li class="default" title="0" data-value="0"><span class="selected">不限</span></li>
+                    <li title="1" data-value="1"><span>新手</span></li>
+                    <li title="2" data-value="2"><span>熟手</span></li>
+                    <li title="3" data-value="3"><span>资深</span></li>
+                    <li title="4" data-value="4"><span>有涉外经验</span></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="split"></div>
+            <div class="area">
+                <div class="item">
+                    最低学历：
+                </div>
+                <input type="hidden" name="Education" value="0">
+                <ul class="check">
+                    <li class="default" title="0" data-value="0"><span class="selected">不限</span></li>
+                    <li title="1" data-value="1"><span>小学</span></li>
+                    <li title="2" data-value="2"><span>初中</span></li>
+                    <li title="3" data-value="3"><span>高中</span></li>
+                    <li title="5" data-value="5"><span>大专以上</span></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="split"></div>
+            <div class="area">
+                <div class="item">排序：</div>
+                <input name="Order" type="hidden" value="">
+                <input name="OrderType" type="hidden" value="">
+                <ul class="check">
+                    <li data-value="" data-sort-type="0"class="default"><span >默认</span></li>
+                    <li data-value="Salary" data-sort-type="0"><span>工资</span></li>
+                    <li data-value="Experience" data-sort-type="1"><span>经验</span></li>
+                    <li data-value="Birthday" data-sort-type="0"><span>年龄</span></li>
+                    <li data-value="Education" data-sort-type="1"><span>学历</span></li>
+                    <li data-value="Hot" data-sort-type="1"><span>人气</span></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </form>
+        <div id="personList" class="list_box">
+            <div class="list_item">
+                <a href="#" target="_blank"><img src="img/adv/month1.jpg" width="120" height="160" alt="郎艳红" title="郎艳红" class="photo"></a>
+                <div class="info">
+                    <div class="title">
+                        <a href="#" target="_blank">郎艳红</a>                <img src="img/icon/v16.png" alt="" title="已认证">
+                    </div>
+                    <div class="number">0071184</div>
+                    <div class="summary">42岁 属虎 双子座 黑龙江人 <br>2016年加入嘉乐会。从事育儿嫂,月嫂等工作。</div>
+                    <div class="salary">
+                    </div>
+                    <div class="bottom">
+                        <a class="favorite" data-ajax="true" data-ajax-failure="ActionFailure" data-ajax-success="FavoriteSuccess" href="#" title="添加到我的收藏夹">收藏(202)</a>
+                        <a class="view" href="#" target="_blank">查看</a>
+                    </div>
+                </div>
+            </div>
+            <div class="list_item">
+                <a href="#" target="_blank"><img src="img/adv/month2.jpg" width="120" height="160" alt="王德丽" title="王德丽" class="photo"></a>
+                <div class="info">
+                    <div class="title">
+                        <a href="#" target="_blank">王德丽</a>                <img src="img/icon/v16.png" alt="" title="已认证">
+                    </div>
+                    <div class="number">0070014</div>
+                    <div class="summary">47岁 属鸡 天蝎座 山东人 初中<br>2016年加入嘉乐会。从事月嫂等工作。有<span class="money">多年</span>家政行业工作经验。</div>
+                    <div class="salary">
+                    </div>
+                    <div class="bottom">
+                        <a class="favorite" data-ajax="true" data-ajax-failure="ActionFailure" data-ajax-success="FavoriteSuccess" href="#" title="添加到我的收藏夹">收藏(228)</a>
+                        <a class="view" href="#" target="_blank">查看</a>
+                    </div>
+                </div>
+            </div>
+            <div class="list_item">
+                <a href="#" target="_blank"><img src="img/adv/month3.jpg" width="120" height="160" alt="耿丽" title="耿丽" class="photo"></a>
+                <div class="info">
+                    <div class="title">
+                        <a href="#" target="_blank">耿丽</a>                <img src="img/icon/v16.png" alt="" title="已认证">
+                    </div>
+                    <div class="number">0061989</div>
+                    <div class="summary">32岁 属鼠 狮子座 安徽人 初中<br>2016年加入嘉乐会。从事月嫂,育儿嫂,育儿兼家务,自理老人等工作。有<span class="money">两年以上</span>家政行业工作经验。</div>
+                    <div class="salary">
+                    </div>
+                    <div class="bottom">
+                        <a class="favorite" data-ajax="true" data-ajax-failure="ActionFailure" data-ajax-success="FavoriteSuccess" href="#" title="添加到我的收藏夹">收藏(278)</a>
+                        <a class="view" href="#" target="_blank">查看</a>
+                    </div>
+                </div>
+            </div>
+            <div class="list_item">
+                <a href="#" target="_blank"><img src="img/adv/month4.jpg" width="120" height="160" alt="鞠志芳" title="鞠志芳" class="photo"></a>
+                <div class="info">
+                    <div class="title">
+                        <a href="#" target="_blank">鞠志芳</a>                <img src="img/icon/v16.png" alt="" title="已认证">
+                    </div>
+                    <div class="number">0027712</div>
+                    <div class="summary">36岁 属鸡 水瓶座 辽宁人 高中<br>2015年加入嘉乐会。从事月嫂,育儿嫂,育儿兼家务等工作。有<span class="money">两年以上</span>家政行业工作经验。</div>
+                    <div class="salary">
+                    </div>
+                    <div class="bottom">
+                        <a class="favorite" data-ajax="true" data-ajax-failure="ActionFailure" data-ajax-success="FavoriteSuccess" href="#" title="添加到我的收藏夹">收藏(700)</a>
+                        <a class="view" href="#" target="_blank">查看</a>
+                    </div>
+                </div>
+            </div>
+            <div class="list_item">
+                <a href="#" target="_blank"><img src="img/adv/month1.jpg" width="120" height="160" alt="刘凤丽" title="刘凤丽" class="photo"></a>
+                <div class="info">
+                    <div class="title">
+                        <a href="/Detail/Person/fea11437-cacf-465c-b9fd-ee58a566cfd0" target="_blank">刘凤丽</a>                <img src="img/icon/v16.png" alt="" title="已认证">
+                    </div>
+                    <div class="number">0069697</div>
+                    <div class="summary">45岁 属猪 狮子座 山东人 大专<br>2016年加入嘉乐会。从事月嫂,育儿嫂,育儿兼家务,家务兼育儿等工作。有<span class="money">两年以上</span>家政行业工作经验。</div>
+                    <div class="salary">
+                    </div>
+                    <div class="bottom">
+                        <a class="favorite" data-ajax="true" data-ajax-failure="ActionFailure" data-ajax-success="FavoriteSuccess" href="#" title="添加到我的收藏夹">收藏(242)</a>
+                        <a class="view" href="#" target="_blank">查看</a>
+                    </div>
+                </div>
+            </div>
+            <div class="list_item">
+                <a href="#" target="_blank"><img src="img/adv/month1.jpg" width="120" height="160" alt="韩英英" title="韩英英" class="photo"></a>
+                <div class="info">
+                    <div class="title">
+                        <a href="#" target="_blank">韩英英</a>                <img src="img/icon/v16.png" alt="" title="已认证">
+                    </div>
+                    <div class="number">0100680</div>
+                    <div class="summary">41岁 属兔 处女座 河北人 <br>2017年加入嘉乐会。从事月嫂,育儿嫂,一般家务等工作。有<span class="money">两年以上</span>家政行业工作经验。</div>
+                    <div class="salary">
+                    </div>
+                    <div class="bottom">
+                        <a class="favorite" data-ajax="true" data-ajax-failure="ActionFailure" data-ajax-success="FavoriteSuccess" href="#" title="添加到我的收藏夹">收藏(27)</a>
+                        <a class="view" href="#" target="_blank">查看</a>
+                    </div>
+                </div>
+            </div>
+            <div class="list_item">
+                <a href="#" target="_blank"><img src="img/adv/month1.jpg" width="120" height="160" alt="孙新红" title="孙新红" class="photo"></a>
+                <div class="info">
+                    <div class="title">
+                        <a href="#" target="_blank">孙新红</a>                <img src="img/icon/v16.png" alt="" title="已认证">
+                    </div>
+                    <div class="number">0071602</div>
+                    <div class="summary">47岁 属狗 魔羯座 山东人 高中<br>2016年加入嘉乐会。从事月嫂等工作。有<span class="money">多年</span>家政行业工作经验。</div>
+                    <div class="salary">
+                    </div>
+                    <div class="bottom">
+                        <a class="favorite" data-ajax="true" data-ajax-failure="ActionFailure" data-ajax-success="FavoriteSuccess" href="#" title="添加到我的收藏夹">收藏(192)</a>
+                        <a class="view" href="#" target="_blank">查看</a>
+                    </div>
+                </div>
+            </div>
+            <div class="list_item">
+                <a href="#" target="_blank"><img src="img/adv/month1.jpg" width="120" height="160" alt="周桂平" title="周桂平" class="photo"></a>
+                <div class="info">
+                    <div class="title">
+                        <a href="#" target="_blank">周桂平</a>                <img src="img/icon/v16.png" alt="" title="已认证">
+                    </div>
+                    <div class="number">0085563</div>
+                    <div class="summary">38岁 属马 射手座 河北人 初中<br>2016年加入嘉乐会。从事育儿嫂,育儿兼家务,家务兼育儿,月嫂等工作。有<span class="money">多年</span>家政行业工作经验。</div>
+                    <div class="salary">
+                    </div>
+                    <div class="bottom">
+                        <a class="favorite" data-ajax="true" data-ajax-failure="ActionFailure" data-ajax-success="FavoriteSuccess" href="#" title="添加到我的收藏夹">收藏(66)</a>
+                        <a class="view" href="#" target="_blank">查看</a>
+                    </div>
+                </div>
+            </div>
+            <div class="list_item">
+                <a href="#" target="_blank"><img src="img/adv/month1.jpg" width="120" height="160" alt="李江芹" title="李江芹" class="photo"></a>
+                <div class="info">
+                    <div class="title">
+                        <a href="#" target="_blank">李江芹</a>                <img src="img/icon/v16.png" alt="" title="已认证">
+                    </div>
+                    <div class="number">0076781</div>
+                    <div class="summary">48岁 属猴 天秤座 云南人 高中<br>2016年加入嘉乐会。从事月嫂,育儿嫂等工作。有<span class="money">多年</span>家政行业工作经验。</div>
+                    <div class="salary">
+                    </div>
+                    <div class="bottom">
+                        <a class="favorite" data-ajax="true" data-ajax-failure="ActionFailure" data-ajax-success="FavoriteSuccess" href="#" title="添加到我的收藏夹">收藏(90)</a>
+                        <a class="view" href="#" target="_blank">查看</a>
+                    </div>
+                </div>
+            </div>
+            <div class="list_item">
+                <a href="#" target="_blank"><img src="img/adv/month1.jpg" width="120" height="160" alt="张继焕" title="张继焕" class="photo"></a>
+                <div class="info">
+                    <div class="title">
+                        <a href="#" target="_blank">张继焕</a>                <img src="img/icon/v16.png" alt="" title="已认证">
+                    </div>
+                    <div class="number">0071335</div>
+                    <div class="summary">53岁 属龙 白羊座 河北人 高中<br>2016年加入嘉乐会。从事月嫂等工作。</div>
+                    <div class="salary">
+                    </div>
+                    <div class="bottom">
+                        <a class="favorite" data-ajax="true" data-ajax-failure="ActionFailure" data-ajax-success="FavoriteSuccess" href="#" title="添加到我的收藏夹">收藏(91)</a>
+                        <a class="view" href="#" target="_blank">查看</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="pagebar">
+                <li class="p1" class="hover">1</li>
+                <li class="p2">2</li>
+                <li class="p3">...</li>
+                <li id="p332">332</li><li id="p2" class="last">后一页</li>
+            </ul>
+        </div>
+        <div class="link">
+            <ul>
+                <li class="title">筛选工种</li>
+                <li><a href="#">月嫂</a></li>
+                <li><a href="#">育儿嫂</a></li>
+                <li><a href="#">家务员</a></li>
+                <li><a href="#">小时工</a></li>
+                <li><a href="#">养老</a></li>
+            </ul>
+            <ul>
+                <li class="title">服务须知</li>
+                <li><a href="#">雇主问答</a></li>
+                <li><a href="#">求职问答</a></li>
+                <li><a href="#">工资参考</a></li>
+                <li><a href="#">母婴护理师等级划分</a></li>
+            </ul>
+            <ul>
+                <li class="title">阿姨大学</li>
+                <li><a href="#">管理课程</a></li>
+                <li><a href="#">家政员课程</a></li>
+                <li><a href="#">雇主课程</a></li>
+                <li><a href="#">证书查询</a></li>
+            </ul>
+            <ul>
+                <li class="title">优惠信息</li>
+                <li><a href="#">10周年优惠</a></li>
+            </ul>
+            <ul>
+                <li class="title">家政社区</li>
+                <li><a href="#" target="_blank">雇主吐槽</a></li>
+                <li><a href="#">女子客栈</a></li>
+                <li><a href="#">原生态写作</a></li>
+                <li><a href="#">中国好阿姨</a></li>
+                <li><a href="#">大家拍</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <ul class="about-list">
+        <li class="about-item"><a href="">网站地图</a></li>
+        <li class="about-item">|</li>
+        <li class="about-item"><a href="">关于我们</a></li>
+        <li class="about-item">|</li>
+        <li class="about-item"><a href="">加入我们</a></li>
+        <li class="about-item">|</li>
+        <li class="about-item"><a href="">媒体报道</a></li>
+    </ul>
+    <div class="msg">
+        <p class="about-botton">@2017 zhoubao.com 阿姨来了版权所有</p>
+        <p class="about-botton">周宝家政有限公司</p>
+    </div>
+</footer>
+</body>
+<script>
+    $(".check li").click(function () {
+        $(this).siblings().css("background-color","#f5f5f5");
+        $(this).css("background-color","#0099ff");
+    });
+</script>
+</html>
