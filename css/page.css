@@ -1,0 +1,121 @@
+.page {
+  width: 80%;
+  margin: 0 auto;
+  height: 550px;
+  background-color: #fff;
+}
+.page .detail_left {
+  clear: both;
+  padding: 25px 20px;
+  float: left;
+  display: inline;
+  width: 280px;
+  margin-left: 20px;
+}
+.page .detail_left h1 {
+  margin: 10px 25px;
+  text-align: center;
+  font-size: 1.8em;
+  color: #09f;
+  font-weight: bold;
+  display: block;
+}
+.page .detail_left h3 {
+  font-size: 1.3em;
+  text-align: center;
+}
+.page .detail_left .photo_box {
+  width: 280px;
+  height: 290px;
+  margin: 5px 0 0 0;
+}
+.page .detail_left .photo_box .photo {
+  width: 180px;
+  vertical-align: middle;
+  margin: 20px 49px;
+}
+.page .detail_left .buttons {
+  height: 46px;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+.page .detail_left .buttons a {
+  text-decoration: none;
+  line-height: 46px;
+  display: inline-block;
+  width: 30%;
+  color: #fff;
+  border-radius: 10px;
+  height: 100%;
+  background-color: #09f;
+}
+.page .detail_left .bshare-custom {
+  margin-left: 10px;
+}
+.page .detail_right {
+  padding: 32px 20px;
+  margin-left: 340px;
+}
+.page .detail_right ul.tab {
+  cursor: pointer;
+  height: 40px;
+  padding-left: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #09f;
+}
+.page .detail_right ul.tab li {
+  display: inline-block;
+  margin: 10px;
+  background-color: #f2f2f2;
+  width: 133px;
+  text-align: center;
+  height: 100%;
+  line-height: 40px;
+}
+.page .detail_right a {
+  text-decoration: none;
+}
+.page .detail_right .area1 {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+.page .detail_right .area1 p {
+  font-size: 0.7em;
+  margin-bottom: 20px;
+}
+.page .detail_right .area2 {
+  padding-top: 40px;
+  padding-left: 20px;
+}
+.page .detail_right .area2 p {
+  font-size: 0.7em;
+  line-height: 30px;
+}
+.link {
+  width: 80%;
+  height: 200px;
+  margin: 20px auto;
+  padding-top: 30px;
+  background-color: #f5f5f5;
+}
+.link ul {
+  display: block;
+  float: left;
+  width: 160px;
+  margin: 0 0 0 40px;
+}
+.link ul .title {
+  font-size: 1.3em;
+  padding: 5px 0;
+  color: #09f;
+}
+.link ul li {
+  margin-bottom: 10px;
+}
+.link ul li a {
+  text-decoration: none;
+}
+.link ul li a:hover {
+  color: #000;
+}
