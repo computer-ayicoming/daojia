@@ -2,17 +2,20 @@
   width: 80%;
   margin: 0 auto;
   height: 550px;
-  background-color: #fff;
 }
-.page .detail_left {
+.page .detail_left_wrapper {
+  border-color: #a9a9a9;
+}
+.page .detail_left_wrapper .detail_left {
   clear: both;
   padding: 25px 20px;
   float: left;
   display: inline;
   width: 280px;
   margin-left: 20px;
+  box-shadow: 3px 3px 15px rgba(3,7,3,0.53);
 }
-.page .detail_left h1 {
+.page .detail_left_wrapper .detail_left h1 {
   margin: 10px 25px;
   text-align: center;
   font-size: 1.8em;
@@ -20,53 +23,54 @@
   font-weight: bold;
   display: block;
 }
-.page .detail_left h3 {
+.page .detail_left_wrapper .detail_left h3 {
   font-size: 1.3em;
   text-align: center;
 }
-.page .detail_left .photo_box {
+.page .detail_left_wrapper .detail_left .photo_box {
   width: 280px;
   height: 290px;
   margin: 5px 0 0 0;
 }
-.page .detail_left .photo_box .photo {
+.page .detail_left_wrapper .detail_left .photo_box .photo {
   width: 180px;
   vertical-align: middle;
   margin: 20px 49px;
 }
-.page .detail_left .buttons {
+.page .detail_left_wrapper .detail_left .buttons {
   height: 46px;
   margin: 0 0 10px 0;
   text-align: center;
 }
-.page .detail_left .buttons a {
+.page .detail_left_wrapper .detail_left .buttons a {
   text-decoration: none;
   line-height: 46px;
   display: inline-block;
-  width: 30%;
+  margin-right: 0.5em;
+  width: 110px;
   color: #fff;
   border-radius: 10px;
   height: 100%;
   background-color: #09f;
 }
-.page .detail_left .bshare-custom {
+.page .detail_left_wrapper .detail_left .bshare-custom {
   margin-left: 10px;
 }
 .page .detail_right {
-  padding: 32px 20px;
-  margin-left: 340px;
+  padding-left: 6%;
+  margin-left: 30%;
 }
-.page .detail_right ul.tab {
+.page .detail_right .tab {
   cursor: pointer;
   height: 40px;
-  padding-left: 20px;
   font-size: 1.2em;
   font-weight: bold;
   color: #09f;
 }
-.page .detail_right ul.tab li {
+.page .detail_right .tab li {
   display: inline-block;
-  margin: 10px;
+  padding: -10px;
+  margin-right: 20px;
   background-color: #f2f2f2;
   width: 133px;
   text-align: center;
@@ -77,12 +81,36 @@
   text-decoration: none;
 }
 .page .detail_right .area1 {
-  padding-top: 50px;
+  padding-top: 20px;
   padding-left: 20px;
 }
 .page .detail_right .area1 p {
   font-size: 0.7em;
   margin-bottom: 20px;
+}
+.page .detail_right .area1 .advertise_img {
+  margin-top: 5%;
+  width: 70%;
+  display: flex;
+  align-items: align-items;
+  justify-content: space-between;
+}
+.page .detail_right .area1 .advertise_txt {
+  width: 67%;
+  padding: 2% 1.5% 2% 1%;
+  display: flex;
+  align-items: align-items;
+  justify-content: space-between;
+}
+.page .detail_right .area1 .buttons a {
+  display: inline-block;
+  background-color: #09f;
+  height: 40px;
+  width: 116px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
 }
 .page .detail_right .area2 {
   padding-top: 40px;
